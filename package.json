@@ -1,7 +1,9 @@
 {
+
   "name": "test-project",
   "version": "1.0.0",
   "description": "Проект Smart Device",
+
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.x",
     "autoprefixer": "9.5.x",
@@ -21,11 +23,7 @@
     "posthtml-include": "^1.2.0",
     "stylelint": "9.10.x",
     "stylelint-config-htmlacademy": "0.1.x",
-<<<<<<< HEAD
-    "eslint": "7.3.1",
-=======
     "eslint": "7.4.0",
->>>>>>> 3af222ac3fffe3df0f8bc4aebbb924383cf79d79
     "eslint-config-htmlacademy": "0.4.x"
   },
   "scripts": {

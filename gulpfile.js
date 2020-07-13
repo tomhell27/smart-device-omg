@@ -1,3 +1,4 @@
+
 'use strict';
 
 var gulp = require('gulp');
@@ -24,27 +25,28 @@ gulp.task('css', function () {
     .pipe(sass())
     .pipe(postcss([autoprefixer()]))
     .pipe(csso())
-    .pipe(rename('style.min.css'))
-    .pipe(sourcemap.write('.'))
-    .pipe(gulp.dest('build/css'))
+
+    .pipe(rename("style.min.css"))
+    .pipe(sourcemap.write("."))
+    .pipe(gulp.dest("build/css"))
     .pipe(server.stream());
 });
 
-gulp.task('server', function () {
+gulp.task("server", function () {
   server.init({
-    server: 'build/',
+    server: "build/",
     notify: false,
     open: true,
     cors: true,
-    ui: false,
+    ui: false
   });
 
-  gulp.watch('source/sass/**/*.{scss,sass}', gulp.series('css'));
-  gulp.watch('source/img/icon-*.svg', gulp.series('sprite', 'html', 'refresh'));
-  gulp.watch('source/*.html', gulp.series('html', 'refresh'));
+  gulp.watch("source/sass/**/*.{scss,sass}", gulp.series("css"));
+  gulp.watch("source/img/icon-*.svg", gulp.series("sprite", "html", "refresh"));
+  gulp.watch("source/*.html", gulp.series("html", "refresh"));
 });
 
-gulp.task('refresh', function (done) {
+gulp.task("refresh", function (done) {
   server.reload();
   done();
 });
