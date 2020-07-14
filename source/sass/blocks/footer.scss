@@ -1,0 +1,46 @@
+.footer__back {
+  border-top: 1px solid $color-decor;
+  opacity: 0.5;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 24px;
+}
+
+.footer__condition {
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer__main {
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer__contacts-ul {
+  opacity: 0.5;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 25px;
+}
+
+.footer__nav-ul {
+  opacity: 0.5;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 26px;
+  letter-spacing: 0.03em;
+}
+
+
+.footer__nav-a {
+  color: $color-back;
+}
+
+.footer__head {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 16px;
+}

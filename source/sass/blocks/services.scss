@@ -2,3 +2,49 @@
   background-color: $color-back;
   color: $color-font;
 }
+
+.services__ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+.services__a {
+  display: block;
+  width: 370px;
+  height: 620px;
+  color: $color-font;
+  font-family: $font-roboto--condensed;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.services__a--production {
+  background-image: url(../img/production-desktop.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.services__a--complete {
+  background-image: url(../img/complete-desktop.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.services__a--mounting {
+  background-image: url(../img/mounting-desktop.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.services__p {
+  font-family: $font-roboto--condensed;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 51px;
+}

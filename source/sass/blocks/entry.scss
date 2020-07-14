@@ -2,3 +2,44 @@
   background-color: $color-back;
   color: $color-font;
 }
+
+.entry__head {
+  margin-top: 0;
+  font-family: $font-roboto--condensed;
+  font-weight: bold;
+  font-size: 80px;
+  line-height: 94px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.entry__p {
+  font-family: $font-mono;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 34px;
+}
+
+.entry__button {
+  display: block;
+  background-color: $color-element;
+  width: 409px;
+  font-family: $font-roboto--condensed;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.entry__scroll {
+  width: 93px;
+  display: block;
+  opacity: 0.5;
+  transform: rotate(-90deg);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+}

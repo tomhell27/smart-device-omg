@@ -1,16 +1,65 @@
 .header {
+  display: flex;
   background-color: $color-back;
   color: $color-font;
 }
 
-.header__modal {
-background-color: $color-element;
+.header__p1 {
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 29px;
 }
 
-.header-logo__name {
+.header__p2 {
+  color: $color-text;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.header__modal {
+  display: none;
+  width: 490px;
+  background-color: $color-element;
+  color: $color-font;
+  flex-direction: column;
+}
+
+.header__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.header__name {
   font-family: $font-roboto--condensed;
 }
 
 .header__button {
+  width: 180px;
+  height: 45px;
+  border: 1px $color-font solid;
+  background: none;
+  color: $color-font;
   font-family: $font-roboto--condensed;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.header__contacts {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__ul {
+  display: flex;
+}
+
+.header__li {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
 }

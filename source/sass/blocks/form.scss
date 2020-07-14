@@ -1,4 +1,23 @@
 .form {
+  display: flex;
+  justify-content: space-between;
   background-color: $color-element;
   color: $color-font;
+}
+
+.form__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__action {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__question {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 51px;
 }

@@ -1,0 +1,146 @@
+.advantages {
+  padding-top: 113px;
+  color: $color-font--main;
+}
+
+.advantages__head {
+  margin-top: 50px;
+  margin-bottom: 0px;
+  color: $color-element;
+  font-family: $font-roboto--condensed;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 34px;
+}
+
+.advantages__list {
+  width: 1170px;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.advantages__item {
+  width: 570px;
+  padding: 45px;
+  cursor: pointer;
+  margin-bottom: 30px;
+  position: relative;
+  box-sizing: border-box;
+  border: 1px $color-border solid;
+  border-left: 2px $color-element solid;
+}
+
+.advantages__item::before {
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 40px;
+}
+
+.advantages__item--hired::before {
+  width: 35px;
+  height: 35px;
+  background-image: url(../img/hired.svg);
+}
+
+.advantages__item--time::before {
+  width: 29px;
+  height: 35px;
+  background-image: url(../img/stopwatch.svg);
+}
+
+.advantages__item--detective::before {
+  width: 36px;
+  height: 31px;
+  background-image: url(../img/detective.svg);
+}
+
+.advantages__item--person::before {
+  width: 35px;
+  height: 35px;
+  background-image: url(../img/tag.svg);
+}
+
+.advantages__description {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.advantages__item:hover {
+  border: none;
+  background-color: $color-element;
+  color: $color-font;
+
+  .advantages__head {
+    color: $color-font;
+  }
+}
+
+.advantages__item--person:hover::before {
+  width: 35px;
+  height: 35px;
+  background-image: url(../img/tag-hover.svg);
+}
+
+.advantages__item--detective:hover::before {
+  width: 36px;
+  height: 31px;
+  background-image: url(../img/detective-hover.svg);
+}
+
+.advantages__item--time:hover::before {
+  width: 29px;
+  height: 35px;
+  background-image: url(../img/stopwatch-hover.svg);
+}
+
+.advantages__item--hired:hover::before {
+  width: 35px;
+  height: 35px;
+  background-image: url(../img/hired-hover.svg);
+}
+
+@media (max-width: $tablet-width) {
+  .advantages__list {
+    width: 720px;
+  }
+
+  .advantages__item {
+    width: 345px;
+  }
+
+  .advantages__head {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 34px;
+  }
+
+  .advantages__description {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .advantages__head {
+    font-size: 20px;
+    line-height: 140.62%;
+  }
+
+  .advantages__list {
+    width: 300px;
+    flex-direction: column;
+  }
+
+  .advantages__item {
+    width: 290px;
+  }
+}
