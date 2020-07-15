@@ -1,8 +1,22 @@
 .about-us {
+  padding-top: 45px;
+  padding-bottom: 100px;
+}
+
+.about-us__img {
+  padding-top: 35px;
+  padding-left: 10px;
+}
+
+.about-us__wrap {
+  width: 1260px;
   display: flex;
+  margin: 0 auto;
 }
 
 .about-us h2 {
+  margin-bottom: 0;
+  font-family: $font-roboto--condensed;
   font-style: normal;
   font-weight: normal;
   font-size: 36px;
@@ -10,6 +24,7 @@
 }
 
 .about-us p {
+  margin-top: 20px;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -19,7 +34,10 @@
 .about-us__a {
   display: block;
   width: 180px;
-  height: 45px;
+  height: 35px;
+  border-radius: 5px;
+  margin-top: 40px;
+  padding-top: 10px;
   border: 1px $color-element solid;
   color: $color-element;
   font-family: $font-roboto--condensed;
@@ -29,4 +47,32 @@
   text-align: center;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+}
+
+.about-us__description {
+  width: 984px;
+}
+
+@media (max-width: $tablet-width) {
+  .about-us__description {
+    width: 532px;
+  }
+
+  .about-us__wrap {
+    width: 720px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .about-us__description {
+    width: 288px;
+  }
+
+  .about-us__wrap {
+    width: 290px;
+  }
+
+  .about-us__img {
+    display: none;
+  }
 }

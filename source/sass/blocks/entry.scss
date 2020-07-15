@@ -1,4 +1,6 @@
 .entry {
+  display: flex;
+  justify-content: space-between;
   background-color: $color-back;
   color: $color-font;
 }
@@ -42,4 +44,34 @@
   font-weight: normal;
   font-size: 14px;
   line-height: 16px;
+}
+
+@media (max-width: $tablet-width) {
+  .entry__head {
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 70px;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+  }
+
+  .entry__p {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 28px
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .entry__head {
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 47px;
+  }
+
+  .entry__p {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 25px
+  }
 }

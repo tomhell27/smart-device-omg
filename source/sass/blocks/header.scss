@@ -1,7 +1,12 @@
 .header {
-  display: flex;
+  position: relative;
   background-color: $color-back;
   color: $color-font;
+}
+
+.header__wrap {
+  display: flex;
+  justify-content: space-between;
 }
 
 .header__p1 {
@@ -56,10 +61,31 @@
 
 .header__ul {
   display: flex;
+  justify-content: space-between;
 }
 
 .header__li {
+  position: relative;
   font-weight: normal;
   font-size: 16px;
   line-height: 18px;
+}
+
+.header__li::before {
+  content: "";
+  position: relative;
+  width: 20px;
+  height: 20px;
+}
+
+.header__li--mail::before {
+  background-image: url(../img/mail.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.header__li--mail::before {
+  background-image: url(../img/phone-call.svg);
+  background-repeat: no-repeat;
+  background-position: center;
 }

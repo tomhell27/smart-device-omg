@@ -1,17 +1,24 @@
 .services {
+  padding-top: 93px;
+  padding-bottom: 127px;
   background-color: $color-back;
   color: $color-font;
 }
 
 .services__ul {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .services__a {
+  position: relative;
   display: block;
   width: 370px;
   height: 620px;
+  opacity: 0.2;
   color: $color-font;
   font-family: $font-roboto--condensed;
   font-style: normal;
@@ -20,31 +27,84 @@
   line-height: 30px;
 }
 
-.services__a--production {
-  background-image: url(../img/production-desktop.jpg);
+.services__a::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  width: 63px;
+  height: 63px;
+  right: 0;
+  bottom: 0;
+  background-color: $color-element;
+  background-image: url(../img/tir.svg);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
-}
-
-.services__a--complete {
-  background-image: url(../img/complete-desktop.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-
-.services__a--mounting {
-  background-image: url(../img/mounting-desktop.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
 }
 
 .services__p {
+  margin: 0;
   font-family: $font-roboto--condensed;
   font-style: normal;
   font-weight: normal;
   font-size: 36px;
   line-height: 51px;
+}
+
+.services__head {
+  width: 220px;
+  position: relative;
+  top: 103px;
+  left: 44px;
+}
+
+.services__wrap {
+  width: 1170px;
+  margin: 0 auto;
+}
+
+@media (max-width: $tablet-width) {
+  .services {
+    padding-top: 53px;
+    padding-bottom: 78px;
+  }
+
+  .services__wrap {
+    width: 720px;
+  }
+
+  .services__p {
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 45px;
+  }
+
+  .services__ul {
+    flex-direction: column;
+  }
+
+  .services__a {
+    width: 715px;
+    height: 256px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .services {
+    padding-bottom: 64px;
+  }
+
+  .services__wrap {
+    width: 290px;
+  }
+
+  .services__p {
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 39px;
+  }
+
+  .services__a {
+    width: 290px;
+    height: 256px;
+  }
 }
