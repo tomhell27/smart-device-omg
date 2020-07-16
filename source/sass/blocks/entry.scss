@@ -1,21 +1,32 @@
 .entry {
+  width: 1420px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   background-color: $color-back;
   color: $color-font;
 }
 
+.entry__button--mobile {
+  display: none;
+}
+
 .entry__head {
-  margin-top: 0;
+  width: 738px;
+  margin-top: 50px;
+  margin-bottom: 0;
   font-family: $font-roboto--condensed;
   font-weight: bold;
   font-size: 80px;
   line-height: 94px;
-  letter-spacing: 0.07em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
 }
 
 .entry__p {
+  width: 683px;
+  margin-left: 98px;
+  margin-bottom: 35px;
   font-family: $font-mono;
   font-weight: normal;
   font-size: 22px;
@@ -23,9 +34,15 @@
 }
 
 .entry__button {
+  width: 350px;
+  padding-left: 28px;
+  padding-right: 28px;
+  padding-top: 21px;
+  padding-bottom: 21px;
+  margin-left: 98px;
   display: block;
+  border-radius: 5px;
   background-color: $color-element;
-  width: 409px;
   font-family: $font-roboto--condensed;
   font-weight: bold;
   font-size: 16px;
@@ -38,16 +55,38 @@
 .entry__scroll {
   width: 93px;
   display: block;
+  position: relative;
+  top: 130px;
+  right: 30px;
   opacity: 0.5;
   transform: rotate(-90deg);
+  color: $color-font;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 16px;
 }
 
+.entry__scroll:target ~ .avantages {
+  transform: translateY( -500px );
+}
+
 @media (max-width: $tablet-width) {
+  .entry {
+    width: 740px;
+  }
+
+  .entry__description {
+    width: 420px;
+  }
+
+  .entry__scroll {
+    display: none;
+  }
+
   .entry__head {
+    width: 400px;
+    margin-left: 70px;
     font-weight: bold;
     font-size: 60px;
     line-height: 70px;
@@ -56,22 +95,62 @@
   }
 
   .entry__p {
+    width: 356px;
+    margin-left: 120px;
+    margin-bottom: 45px;
+    margin-top: 30px;
     font-weight: normal;
     font-size: 18px;
     line-height: 28px
   }
+
+  .entry__button {
+    width: 320px;
+    margin-left: 120px;
+    margin-bottom: 60px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
 }
 
 @media (max-width: $mobile-width) {
+  .entry {
+    width: 320px;
+    flex-direction: column-reverse;
+  }
+
   .entry__head {
+    width: 277px;
+    margin-left: 0;
     font-weight: bold;
     font-size: 40px;
     line-height: 47px;
   }
 
   .entry__p {
+    width: 245px;
+    margin-left: 0;
     font-weight: normal;
     font-size: 16px;
     line-height: 25px
+  }
+
+  .entry__button--mobile {
+    display: block;
+    width: 250px;
+    margin-left: 0;
+  }
+
+  .entry__button--desk {
+    display: none;
+  }
+
+  .entry__description {
+    width: 300px;
+    margin: 0 auto;
   }
 }

@@ -1,21 +1,33 @@
 .header {
+  padding-top: 30px;
+  padding-bottom: 104px;
   position: relative;
   background-color: $color-back;
   color: $color-font;
 }
 
 .header__wrap {
+  width: 1411px;
+  margin: 0 auto;
+  margin-bottom: 174px;
   display: flex;
   justify-content: space-between;
 }
 
+.header__logo {
+  display: flex;
+}
+
 .header__p1 {
+  margin-top: 5px;
+  margin-bottom: 0;
   font-weight: bold;
   font-size: 25px;
   line-height: 29px;
 }
 
 .header__p2 {
+  margin-top: 2px;
   color: $color-text;
   font-weight: 500;
   font-size: 12px;
@@ -24,7 +36,11 @@
 
 .header__modal {
   display: none;
-  width: 490px;
+  width: 410px;
+  padding-top: 33px;
+  padding-bottom: 36px;
+  padding-left: 40px;
+  padding-right: 40px;
   background-color: $color-element;
   color: $color-font;
   flex-direction: column;
@@ -35,7 +51,56 @@
   flex-direction: column;
 }
 
+.header__form input {
+  width: 395px;
+  margin-bottom: 31px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  padding-left: 17px;
+  color: $color-font;
+  background-color: $color-input;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.header__form textarea {
+  width: 395px;
+  resize: none;
+  padding-top: 13px;
+  padding-left: 17px;
+  color: $color-font;
+  background-color: $color-input;
+  border: none;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.header__form button {
+  width: 412px;
+  height: 45px;
+  margin-bottom: 34px;
+  padding-left: 18px;
+  padding-right: 18px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  margin-top: 31px;
+  background-color: $color-element;
+  border: 1px $color-font solid;
+  border-radius: 5px;
+  color: $color-font;
+  font-family: $font-roboto--condensed;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
 .header__name {
+  margin-left: 16px;
   font-family: $font-roboto--condensed;
 }
 
@@ -54,12 +119,62 @@
   text-transform: uppercase;
 }
 
+.header__agree {
+  width: 238px;
+  color: $color-font;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.header__label {
+  position: relative;
+}
+
+.header__label::before {
+  content: "";
+  display: inline-block;
+  position: relative;
+  bottom: 5px;
+  width: 16px;
+  height: 16px;
+  background-color: $color-element;
+  border: 1px $color-font solid;
+}
+
+.header__check:checked + .header__label::before {
+  background-image: url("../img/check.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.header__modal-p1 {
+  margin-top: 0;
+  font-family: $font-roboto--condensed;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 28px;
+  line-height: 39px;
+}
+
+.header__modal-p2 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+}
+
 .header__contacts {
+  width: 650px;
   display: flex;
   justify-content: space-between;
 }
 
 .header__ul {
+  width: 380px;
+  padding-left: 0;
   display: flex;
   justify-content: space-between;
 }
@@ -71,21 +186,36 @@
   line-height: 18px;
 }
 
-.header__li::before {
-  content: "";
-  position: relative;
-  width: 20px;
-  height: 20px;
+
+@media (max-width: $tablet-width) {
+  .header__modal {
+    display: none;
+  }
+
+  .header__button {
+    display: none;
+  }
+
+  .header__wrap {
+    width: 720px;
+    margin-bottom: 50px;
+  }
+
+  .header__data {
+    display: none;
+  }
+
+  .header__contacts {
+    width: 100px;
+  }
 }
 
-.header__li--mail::before {
-  background-image: url(../img/mail.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-}
+@media (max-width: $mobile-width) {
+  .header__name {
+    display: none;
+  }
 
-.header__li--mail::before {
-  background-image: url(../img/phone-call.svg);
-  background-repeat: no-repeat;
-  background-position: center;
+  .header__wrap {
+    width: 300px;
+  }
 }

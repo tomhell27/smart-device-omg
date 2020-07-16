@@ -1,24 +1,206 @@
 .form {
-  display: flex;
-  justify-content: space-between;
+  padding-top: 96px;
+  padding-bottom: 113px;
   background-color: $color-element;
   color: $color-font;
 }
 
 .form__content {
-  width: 550px;
+  width: 570px;
+  margin-left: 100px;
   display: flex;
   flex-direction: column;
 }
 
 .form__action {
+  margin-top: 30px;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .form__question {
+  margin-bottom: 0;
+  margin-top: 0;
+  font-family: $font-roboto--condensed;
   font-style: normal;
   font-weight: normal;
   font-size: 36px;
   line-height: 51px;
+}
+
+.form__wrap {
+  width: 1220px;
+  display: flex;
+  margin: 0 auto;
+}
+
+.form textarea {
+  width: 555px;
+  height: 154px;
+  resize: none;
+  padding-top: 13px;
+  padding-left: 17px;
+  margin-top: 40px;
+  color: $color-font;
+  background-color: $color-input;
+  border: none;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.form input {
+  width: 253px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  padding-left: 17px;
+  color: $color-font;
+  background-color: $color-input;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.form__submit {
+  width: 270px;
+  height: 45px;
+  margin-right: 53px;
+  padding-left: 18px;
+  padding-right: 18px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  background-color: $color-element;
+  border: 1px $color-font solid;
+  border-radius: 5px;
+  color: $color-font;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.form__post {
+  padding-top: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.form__agree {
+  width: 230px;
+  padding-top: 5px;
+  color: $color-font;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.form__label {
+  position: relative;
+}
+
+.form__label::before {
+  content: "";
+  display: inline-block;
+  position: relative;
+  top: 5px;
+  right: 10px;
+  width: 16px;
+  height: 16px;
+  background-color: $color-element;
+  border: 1px $color-font solid;
+}
+
+.form__check:checked + .form__label::before {
+  background-image: url("../img/check.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.form__img {
+  margin-top: 60px;
+}
+
+.form__consalt {
+  margin-top: 5px;
+}
+
+@media (max-width: $tablet-width) {
+  .form__img {
+    display: none;
+  }
+
+  .form__wrap {
+    width: 760px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .form {
+    padding-top: 30px;
+  }
+
+  .form__agree {
+    margin: 0 auto;
+  }
+
+  .form__wrap {
+    width: 300px;
+  }
+
+  .form__post {
+    width: 300px;
+    padding-top: 20px;
+    flex-direction: column;
+  }
+
+  .form__content {
+    width: 300px;
+    margin-left: 0;
+  }
+
+  .form__question {
+    width: 243px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 140.62%;
+  }
+
+  .form__consalt {
+    width: 269px;
+    margin-bottom: 0;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .form__action {
+    flex-direction: column;
+  }
+
+  .form__submit {
+    width: 290px;
+    margin: 0 auto;
+  }
+
+  .form textarea {
+    width: 280px;
+    height: 104px;
+    margin-top: 0;
+  }
+
+  .form input {
+    width: 280px;
+    margin-bottom: 31px;
+  }
+
+  .form__label::before {
+    top: 30px;
+    right: 0;
+  }
 }
