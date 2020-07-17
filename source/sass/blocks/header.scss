@@ -1,9 +1,23 @@
 .header {
+  width: 100%;
   padding-top: 30px;
   padding-bottom: 104px;
   position: relative;
   background-color: $color-back;
+  background-image: url(../img/drops-desktop.png);
+  background-size: cover;
+  background-repeat: no-repeat;
   color: $color-font;
+}
+
+.header__modal-show {
+  display: block;
+}
+
+.header__a {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
 }
 
 .header__wrap {
@@ -24,6 +38,11 @@
   font-weight: bold;
   font-size: 25px;
   line-height: 29px;
+}
+
+.header__data {
+  color: $color-font;
+  margin-left: 20px;
 }
 
 .header__p2 {
@@ -108,6 +127,7 @@
   width: 180px;
   height: 45px;
   border: 1px $color-font solid;
+  border-radius: 5px;
   background: none;
   color: $color-font;
   font-family: $font-roboto--condensed;
@@ -186,8 +206,28 @@
   line-height: 18px;
 }
 
+.header__close {
+  width: 17px;
+  height: 17px;
+  position: relative;
+  left: 400px;
+  bottom: 10px;
+  border: none;
+  background-color: $color-element;
+  background-image: url(../img/cross.svg);
+}
 
 @media (max-width: $tablet-width) {
+  .header__svg--mail {
+    width: 25px;
+    height: 19px;
+  }
+
+  .header__svg--phone {
+    width: 24px;
+    height: 24px;
+  }
+
   .header__modal {
     display: none;
   }
@@ -211,6 +251,11 @@
 }
 
 @media (max-width: $mobile-width) {
+  .header__logo-svg {
+    width: 38px;
+    height: 38px;
+  }
+
   .header__name {
     display: none;
   }

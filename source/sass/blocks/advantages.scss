@@ -1,4 +1,5 @@
 .advantages {
+  position: relative;
   padding-top: 113px;
   color: $color-font--main;
 }
@@ -25,6 +26,7 @@
 .advantages__item {
   width: 570px;
   padding: 45px;
+  background-color: $color-font;
   cursor: pointer;
   margin-bottom: 30px;
   position: relative;
@@ -41,10 +43,25 @@
   top: 40px;
 }
 
+.advantages__item::after {
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
 .advantages__item--hired::before {
   width: 35px;
   height: 35px;
   background-image: url(../img/hired.svg);
+}
+
+.advantages__item--hired::after {
+  width: 650px;
+  height: 650px;
+  background-image: url(../img/triangle-right.svg);
+  background-size: cover;
+  top: 0;
 }
 
 .advantages__item--time::before {
@@ -53,16 +70,40 @@
   background-image: url(../img/stopwatch.svg);
 }
 
+.advantages__item--time::after {
+  width: 650px;
+  height: 650px;
+  background-image: url(../img/triangle-left.svg);
+  background-size: cover;
+  top: 0;
+}
+
 .advantages__item--detective::before {
   width: 36px;
   height: 31px;
   background-image: url(../img/detective.svg);
 }
 
+.advantages__item--detective::after {
+  width: 650px;
+  height: 650px;
+  background-image: url(../img/triangle-left.svg);
+  background-size: cover;
+  top: 0;
+}
+
 .advantages__item--person::before {
   width: 35px;
   height: 35px;
   background-image: url(../img/tag.svg);
+}
+
+.advantages__item--person::after {
+  width: 650px;
+  height: 650px;
+  background-image: url(../img/triangle-right.svg);
+  background-size: cover;
+  top: 0;
 }
 
 .advantages__description {

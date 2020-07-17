@@ -5,6 +5,21 @@
   color: $color-font;
 }
 
+.form__img {
+  position: relative;
+  z-index: 2;
+}
+
+.form__img::before {
+  content: "";
+  position: absolute;
+  width: 705px;
+  height: 715px;
+  background-image: url(../img/triangles.svg);
+  bottom: 20px;
+  z-index: 1;
+}
+
 .form__content {
   width: 570px;
   margin-left: 100px;
