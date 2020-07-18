@@ -84,32 +84,36 @@
             </a>
           </li>
         </ul>
-        <button class="header__button">Заказать звонок</button>
+        <button class="header__button visually-hidden">Заказать звонок</button>
       </div>
-      <div class="header__modal">
-        <button type="button" class="header__close"></button>
-        <p class="header__modal-p1">Закажите звонок</p>
-        <p class="header__modal-p2">
-          Оставьте контакты, мы проконсультируем вас бесплатно в удобное время
-        </p>
-        <form class="header__form" action="">
-          <label for="">
-            <input type="text" placeholder="Имя" name="name">
-          </label>
-          <label for="">
-            <input type="tel" placeholder="Телефон" name="telephone">
-          </label>
-          <label for="">
-            <textarea name="" id="" cols="30" rows="10" placeholder="Ваш вопрос" name="question"></textarea>
-          </label>
-          <button type="submit">Отправить</button>
-          <div>
-            <input class="header__check visually-hidden" name="согласен" type="checkbox" checked id="agree"
-              aria-label="чекбокс" required>
-            <label for="agree" class="header__label"></label>
-            <a class="header__agree" href="#">Я согласен на обработку персональных данных</a>
-          </div>
-        </form>
+      <div class="header__modal header__modal--close">
+        <div class="header__modal-wrap">
+          <button type="button" class="header__close"></button>
+          <p class="header__modal-p1">Закажите звонок</p>
+          <p class="header__modal-p2">
+            Оставьте контакты, мы проконсультируем вас бесплатно в удобное время
+          </p>
+          <form class="header__form" method="post" enctype="multipart/form-data" action="https://echo.htmlacademy.ru"
+            autocomplete="off">
+            <label for="head-name">
+              <input id="head-name" type="text" placeholder="Имя" name="name" required>
+            </label>
+            <label for="head-tel">
+              <input id="head-tel" type="tel" placeholder="Телефон" name="telephone" class="phone" required>
+            </label>
+            <label for="">
+              <textarea name="question" id="head-question" cols="30" rows="10" placeholder="Ваш вопрос" name="question"
+                required></textarea>
+            </label>
+            <button type="submit" class="header__modal-submit">Отправить</button>
+            <div>
+              <input class="header__check visually-hidden" name="согласен" type="checkbox" checked id="agree"
+                aria-label="чекбокс" required>
+              <label for="agree" class="header__label"></label>
+              <a class="header__agree" href="#">Я согласен на обработку персональных данных</a>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
     <section class="entry">
@@ -279,16 +283,16 @@
         <div class="form__content">
           <p class="form__question">Остались вопросы? Задайте их нам!</p>
           <p class="form__consalt">Мы проконсультируем Вас бесплатно</p>
-          <form class="form__action" action="">
-            <label>
-              <input type="text" placeholder="Имя">
+          <form class="form__action" method="post" enctype="multipart/form-data" action="https://echo.htmlacademy.ru"
+          autocomplete="off">
+            <label for="form-name">
+              <input name="name" id="form-name" type="text" placeholder="Имя" required>
             </label>
-            <label>
-              <input type="tel" placeholder="Телефон" onkeyup="this.value = this.value.replace(/[^\d]/g,'');"
-                minlength="11" maxlength="16" required>
+            <label for="form-tel">
+              <input name="phone" id="form-tel" type="tel" placeholder="Телефон" class="phone" required>
             </label>
-            <label for="">
-              <textarea name="" id="" cols="30" rows="10" placeholder="Ваш вопрос"></textarea>
+            <label for="form-question">
+              <textarea name="Задайте свой вопрос" id="form-question" cols="30" rows="10" placeholder="Ваш вопрос" required></textarea>
             </label>
 
             <div class="form__post">
@@ -379,13 +383,17 @@
         </div>
       </div>
       <div class="footer__container">
+        <!--Разделы сайта-->
+
         <nav class="footer__nav">
+          <!--Заголовок-->
+
           <div class="footer__head-wrap">
-          <h2 class="footer__head">Разделы сайта</h2>
-          <button class="footer__head-button"></button>
-        </div>
-          <div class="footer__nav-wrap">
-            <ul class="footer__nav-ul">
+            <h2 class="footer__head">Разделы сайта</h2>
+            <button class="footer__head-button"></button>
+          </div>
+          <div class="footer__nav-wrap footer__close">
+            <ul class="footer__nav-ul footer__nav-ul--1">
               <li>
                 <a href="" class="footer__nav-a">О компании</a>
               </li>
@@ -400,7 +408,7 @@
               </li>
             </ul>
 
-            <ul class="footer__nav-ul">
+            <ul class="footer__nav-ul footer__nav-ul--2">
               <li>
                 <a href="" class="footer__nav-a">Комплектующие</a>
               </li>
@@ -413,12 +421,15 @@
             </ul>
           </div>
         </nav>
+
+        <!--Раздел Контакты-->
         <div class="footer__contacts">
+          <!--Нвш офис-->
           <div class="footer__head-wrap">
-          <h2 class="footer__head">Наш офис</h2>
-          <button class="footer__head-button"></button>
-        </div>
-          <ul class="footer__contacts-ul">
+            <h2 class="footer__head">Наш офис</h2>
+            <button class="footer__head-button"></button>
+          </div>
+          <ul class="footer__contacts-ul footer__close">
             <li>г. Мытищи, Олимпийский проспект, д.10</li>
             <li>
               <a href="tel:+74955894050" aria-label="Телефон для связи" class="footer__nav-a">
@@ -448,7 +459,9 @@
       </ul>
     </div>
   </footer>
-  <script src="js/main.js"></script>
+  <script src="js/mask.js"></script>
+  <script src="js/modal.js"></script>
+  <script src="js/accordeon.js"></script>
 </body>
 
 </html>

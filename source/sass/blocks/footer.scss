@@ -191,7 +191,7 @@
   .footer__social-wrap {
     flex-direction: column;
     align-items: center;
-    width: 310px;
+    width: 300px;
   }
 
   .footer__nav {
@@ -199,6 +199,7 @@
   }
 
   .footer__container {
+    padding-left: 0;
     flex-direction: column;
     align-items: center;
     width: 310px;
@@ -230,12 +231,26 @@
     width: 17px;
     height: 17px;
     border: none;
+    background-color: $color-font;
     background-image: url(../img/minus.svg);
+    background-repeat: no-repeat;
   }
 
   .footer__head-wrap {
     width: 300px;
     display: flex;
     justify-content: space-between;
+  }
+
+  .footer__head-wrap--close {
+    border-bottom: 1px solid $color-border;
+  }
+
+  .footer__close {
+    display: none;
+  }
+
+  .footer__open {
+    display: block;
   }
 }
