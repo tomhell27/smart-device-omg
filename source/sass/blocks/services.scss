@@ -1,16 +1,21 @@
 .services {
-  padding-top: 93px;
+  padding-top: 85px;
   padding-bottom: 127px;
   background-color: $color-back;
   color: $color-font;
+  scroll-behavior: smooth;
 }
 
 .services__ul {
   padding: 0;
-  margin-top: 0;
+  margin-top: 45px;
   margin-bottom: 0;
   display: flex;
   justify-content: space-between;
+}
+
+.services__li {
+  position: relative;
 }
 
 .services__a {
@@ -36,7 +41,7 @@
   right: 0;
   bottom: 0;
   background-color: $color-element;
-  background-image: url(../img/tir.svg);
+  background-image: url("../img/tir.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -51,28 +56,36 @@
 }
 
 .services__head {
-  width: 220px;
-  position: relative;
-  top: 103px;
+  width: 190px;
+  top: 40px;
   left: 44px;
+  position: absolute;
 }
 
 .services__wrap {
-  width: 1170px;
+  width: calc(100% - 750px);
+  min-width: 1000px;
   margin: 0 auto;
+}
+
+.services__li {
+  width: calc(100% / 3 - 60px);
+  overflow: hidden;
 }
 
 @media (max-width: $tablet-width) {
   .services {
     padding-top: 53px;
-    padding-bottom: 78px;
+    padding-bottom: 30px;
   }
 
   .services__wrap {
+    min-width: 0;
     width: 720px;
   }
 
   .services__p {
+    padding-right: 100px;
     font-weight: normal;
     font-size: 32px;
     line-height: 45px;
@@ -85,6 +98,11 @@
   .services__a {
     width: 715px;
     height: 256px;
+  }
+
+  .services__li {
+    width: 715px;
+    margin-bottom: 46px;
   }
 }
 

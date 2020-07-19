@@ -3,11 +3,20 @@
   padding-bottom: 113px;
   background-color: $color-element;
   color: $color-font;
+  scroll-behavior: smooth;
 }
 
 .form__img {
+  width: calc(100% - 578px);
+  max-width: 511px;
   position: relative;
   z-index: 2;
+  margin-top: 60px;
+}
+
+.form__plane {
+  width: 100%;
+  height: auto;
 }
 
 .form__img::before {
@@ -15,14 +24,15 @@
   position: absolute;
   width: 705px;
   height: 715px;
-  background-image: url(../img/triangles.svg);
-  bottom: 20px;
+  background-image: url("../img/triangles.svg");
   z-index: 1;
+  left: -170px;
+  bottom: -90px;
 }
 
 .form__content {
   width: 570px;
-  margin-left: 100px;
+  margin-left: 110px;
   display: flex;
   flex-direction: column;
 }
@@ -45,7 +55,8 @@
 }
 
 .form__wrap {
-  width: 1220px;
+  width: calc(100% - 700px);
+  min-width: 1000px;
   display: flex;
   margin: 0 auto;
 }
@@ -98,7 +109,7 @@
 }
 
 .form__post {
-  padding-top: 40px;
+  padding-top: 30px;
   display: flex;
   justify-content: space-between;
 }
@@ -135,21 +146,33 @@
   background-size: cover;
 }
 
-.form__img {
-  margin-top: 60px;
-}
-
 .form__consalt {
-  margin-top: 5px;
+  margin-top: 15px;
 }
 
 @media (max-width: $tablet-width) {
+  .form {
+    padding-top: 80px;
+    padding-bottom: 100px;
+  }
+
   .form__img {
     display: none;
   }
 
   .form__wrap {
+    min-width: 0;
     width: 760px;
+  }
+
+  .form__question {
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 45px;
+  }
+
+  .form__post {
+    padding-top: 50px;
   }
 }
 

@@ -1,12 +1,13 @@
 .advantages {
   position: relative;
-  padding-top: 113px;
+  padding-top: 103px;
   color: $color-font--main;
+  scroll-behavior: smooth;
 }
 
 .advantages__head {
   margin-top: 50px;
-  margin-bottom: 0px;
+  margin-bottom: 0;
   color: $color-element;
   font-family: $font-roboto--condensed;
   font-weight: normal;
@@ -15,7 +16,8 @@
 }
 
 .advantages__list {
-  width: 1170px;
+  width: calc(100% - 750px);
+  min-width: 1000px;
   margin: 0 auto;
   padding: 0;
   display: flex;
@@ -24,11 +26,12 @@
 }
 
 .advantages__item {
-  width: 570px;
+  width: calc(100% / 2 - 30px);
+  height: 299px;
   padding: 45px;
   background-color: $color-font;
   cursor: pointer;
-  margin-bottom: 30px;
+  margin-bottom: 35px;
   position: relative;
   box-sizing: border-box;
   border: 1px $color-border solid;
@@ -53,57 +56,60 @@
 .advantages__item--hired::before {
   width: 35px;
   height: 35px;
-  background-image: url(../img/hired.svg);
+  background-image: url("../img/hired.svg");
 }
 
 .advantages__item--hired::after {
   width: 650px;
   height: 650px;
-  background-image: url(../img/triangle-right.svg);
+  background-image: url("../img/triangle-right.svg");
   background-size: cover;
-  top: 0;
+  top: 90px;
+  left: -550px;
 }
 
 .advantages__item--time::before {
   width: 29px;
   height: 35px;
-  background-image: url(../img/stopwatch.svg);
+  background-image: url("../img/stopwatch.svg");
 }
 
 .advantages__item--time::after {
-  width: 650px;
-  height: 650px;
-  background-image: url(../img/triangle-left.svg);
+  width: 300px;
+  height: 300px;
+  background-image: url("../img/triangle-left.svg");
   background-size: cover;
-  top: 0;
+  top: -60px;
+  left: -160px;
 }
 
 .advantages__item--detective::before {
   width: 36px;
   height: 31px;
-  background-image: url(../img/detective.svg);
+  background-image: url("../img/detective.svg");
 }
 
 .advantages__item--detective::after {
   width: 650px;
   height: 650px;
-  background-image: url(../img/triangle-left.svg);
+  background-image: url("../img/triangle-left.svg");
   background-size: cover;
-  top: 0;
+  left: -550px;
 }
 
 .advantages__item--person::before {
   width: 35px;
   height: 35px;
-  background-image: url(../img/tag.svg);
+  background-image: url("../img/tag.svg");
 }
 
-.advantages__item--person::after {
-  width: 650px;
-  height: 650px;
-  background-image: url(../img/triangle-right.svg);
+.advantages__list::after {
+  width: 300px;
+  height: 300px;
+  background-image: url("../img/triangle-right.svg");
   background-size: cover;
   top: 0;
+  right: -320px;
 }
 
 .advantages__description {
@@ -125,40 +131,55 @@
 .advantages__item--person:hover::before {
   width: 35px;
   height: 35px;
-  background-image: url(../img/tag-hover.svg);
+  background-image: url("../img/tag-hover.svg");
 }
 
 .advantages__item--detective:hover::before {
   width: 36px;
   height: 31px;
-  background-image: url(../img/detective-hover.svg);
+  background-image: url("../img/detective-hover.svg");
 }
 
 .advantages__item--time:hover::before {
   width: 29px;
   height: 35px;
-  background-image: url(../img/stopwatch-hover.svg);
+  background-image: url("../img/stopwatch-hover.svg");
 }
 
 .advantages__item--hired:hover::before {
   width: 35px;
   height: 35px;
-  background-image: url(../img/hired-hover.svg);
+  background-image: url("../img/hired-hover.svg");
 }
 
 @media (max-width: $tablet-width) {
+  .advantages {
+    padding-top: 50px;
+  }
+
   .advantages__list {
+    min-width: 0px;
     width: 720px;
   }
 
   .advantages__item {
-    width: 345px;
+    width: 348px;
+    height: auto;
+    margin-bottom: 15px;
+    padding-left: 28px;
+    padding-right: 20px;
+    padding-top: 15px;
+    padding-bottom: 12px;
+  }
+
+  .advantages__item::before {
+    top: 30px;
   }
 
   .advantages__head {
     font-style: normal;
     font-weight: normal;
-    font-size: 24px;
+    font-size: 23px;
     line-height: 34px;
   }
 
@@ -171,6 +192,10 @@
 }
 
 @media (max-width: $mobile-width) {
+  .advantages {
+    padding-top: 30px;
+  }
+
   .advantages__head {
     font-size: 20px;
     line-height: 140.62%;
@@ -183,5 +208,6 @@
 
   .advantages__item {
     width: 290px;
+    height: auto;
   }
 }

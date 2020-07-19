@@ -3,8 +3,8 @@
   padding-top: 30px;
   padding-bottom: 104px;
   position: relative;
+  background-image: url("../img/drops-desktop.png");
   background-color: $color-back;
-  background-image: url(../img/drops-desktop.png);
   background-size: cover;
   background-repeat: no-repeat;
   color: $color-font;
@@ -53,9 +53,10 @@
 }
 
 .header__wrap {
-  width: 1411px;
+  width: calc(100% - 20px);
+  max-width: 1400px;
   margin: 0 auto;
-  margin-bottom: 174px;
+  margin-bottom: 160px;
   display: flex;
   justify-content: space-between;
 }
@@ -75,6 +76,7 @@
 .header__data {
   color: $color-font;
   margin-left: 20px;
+  margin-top: 0;
 }
 
 .header__p2 {
@@ -213,7 +215,7 @@
 }
 
 .header__ul {
-  width: 380px;
+  width: 420px;
   padding-left: 0;
   display: flex;
   justify-content: space-between;
@@ -234,18 +236,20 @@
   bottom: 10px;
   border: none;
   background-color: $color-element;
-  background-image: url(../img/cross.svg);
+  background-image: url("../img/cross.svg");
 }
 
 @media (max-width: $tablet-width) {
-  .header__svg--mail {
-    width: 25px;
-    height: 19px;
+  .header {
+    background-image: url("../img/drops-tablet.png");
+    background-color: $color-back;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 
-  .header__svg--phone {
-    width: 24px;
-    height: 24px;
+  .header__svg {
+    width: 25px;
+    height: 25px;
   }
 
   .header__modal {
@@ -266,11 +270,28 @@
   }
 
   .header__contacts {
-    width: 100px;
+    width: 80px;
+  }
+
+  .header__ul {
+    margin-top: 12px;
+    align-items: baseline;
   }
 }
 
 @media (max-width: $mobile-width) {
+  .header {
+    background-image: url("../img/drops-mobile.png");
+    background-color: $color-back;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-bottom: 0;
+  }
+
+  .header__ul {
+    margin-top: 0;
+  }
+
   .header__logo-svg {
     width: 38px;
     height: 38px;
