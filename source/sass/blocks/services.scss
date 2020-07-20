@@ -108,14 +108,19 @@
 
 @media (max-width: $mobile-width) {
   .services {
-    padding-bottom: 64px;
+    padding-bottom: 35px;
+    padding-top: 45px;
   }
 
   .services__wrap {
-    width: 290px;
+    width: 310px;
   }
 
   .services__p {
+    padding-left: 0;
+    width: 280px;
+    margin: 0 auto;
+    padding-right: 10px;
     font-weight: normal;
     font-size: 28px;
     line-height: 39px;
@@ -124,5 +129,20 @@
   .services__a {
     width: 290px;
     height: 256px;
+  }
+
+  .services__li {
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+  }
+
+  .services__head {
+    font-family: $font-roboto--condensed;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
+    top: 0;
   }
 }

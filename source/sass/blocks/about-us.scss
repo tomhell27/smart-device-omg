@@ -79,6 +79,10 @@
 }
 
 @media (max-width: $mobile-width) {
+  .about-us {
+    padding-bottom: 70px;
+  }
+
   .about-us__description {
     width: 288px;
   }
@@ -89,5 +93,20 @@
 
   .about-us__img {
     display: none;
+  }
+
+  .about-us h2 {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 39px;
+  }
+
+  .about-us__p {
+    margin-bottom: 50px;
+  }
+
+  .about-us__a {
+    margin-top: 20px;
   }
 }
