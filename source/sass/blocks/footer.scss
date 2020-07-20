@@ -1,3 +1,7 @@
+.footer {
+  margin-bottom: 0;
+}
+
 .footer__head-button {
   display: none;
 }
@@ -275,8 +279,8 @@
     height: 17px;
     border: none;
     background-color: $color-font;
-    background-image: url("../img/minus.svg");
-    background-repeat: no-repeat;
+    background-image: none;
+    border-top: 2px solid $color-border;
   }
 
   .footer__head-wrap {
