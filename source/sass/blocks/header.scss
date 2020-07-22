@@ -8,6 +8,12 @@
   background-size: cover;
   background-repeat: no-repeat;
   color: $color-font;
+  overflow: hidden;
+}
+
+.header__body-fix {
+  position: fixed;
+  overflow: hidden;
 }
 
 .header__modal {
@@ -34,6 +40,7 @@
 //Форма открыта
 .header__modal--show {
   display: block;
+  position: fixed;
 }
 
 //Форма закрыта
@@ -53,8 +60,8 @@
 }
 
 .header__wrap {
-  width: calc(100% - 20px);
-  max-width: 1400px;
+  width: calc(100% - 40px);
+  max-width: 1420px;
   margin: 0 auto;
   margin-bottom: 160px;
   display: flex;
@@ -141,7 +148,7 @@
 }
 
 .header__name {
-  margin-left: 16px;
+  margin-left: 18px;
   font-family: $font-roboto--condensed;
 }
 
@@ -209,13 +216,13 @@
 }
 
 .header__contacts {
-  width: 650px;
+  width: 660px;
   display: flex;
   justify-content: space-between;
 }
 
 .header__ul {
-  width: 420px;
+  width: 430px;
   padding-left: 0;
   display: flex;
   justify-content: space-between;
@@ -262,7 +269,7 @@
 
   .header__wrap {
     width: 720px;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
   }
 
   .header__data {

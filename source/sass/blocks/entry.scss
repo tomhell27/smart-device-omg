@@ -1,6 +1,6 @@
 .entry {
   width: 100%;
-  max-width: 1510px;
+  max-width: 1590px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -8,8 +8,8 @@
 }
 
 .entry__description {
-  flex-shrink: 1;
-  margin-left: 20px;
+  padding-left: 90px;
+  position: relative;
 }
 
 .entry__picture {
@@ -18,17 +18,18 @@
 
 .entry__picture-wrap {
   position: relative;
-  overflow: hidden;
 }
 
-.entry__picture-wrap::before {
+.entry__description::before {
   content: "";
   position: absolute;
   width: 705px;
   height: 715px;
   background-image: url("../img/triangles.svg");
-  bottom: -50px;
+  background-size: cover;
   z-index: 1;
+  bottom: 10px;
+  right: -650px;
 }
 
 .entry__head {
@@ -44,7 +45,7 @@
 }
 
 .entry__p {
-  width: 683px;
+  width: 609px;
   position: relative;
   margin-top: 30px;
   margin-left: 98px;
@@ -107,7 +108,12 @@
 
 @media (max-width: $tablet-width) {
   .entry {
-    width: 100%;
+    width: calc(100% - 20px);
+    padding-left: 20px;
+    padding-top: 40px;
+  }
+
+  .entry__description {
     padding-left: 20px;
   }
 
@@ -117,7 +123,7 @@
     z-index: 66;
   }
 
-  .entry__picture-wrap::before {
+  .entry__description::before {
     top: -160px;
     z-index: 65;
   }
@@ -217,4 +223,13 @@
     top: 115px;
     right: 20px;
   }
+
+  .entry__description::before {
+    width: 300px;
+    width: 300px;
+    top: -280px;
+    z-index: 65;
+    left: 100px;
+  }
+
 }

@@ -1,5 +1,5 @@
 .about-us {
-  padding-top: 45px;
+  padding-top: 75px;
   padding-bottom: 90px;
 }
 
@@ -10,7 +10,7 @@
 
 .about-us__wrap {
   width: calc(100% - 660px);
-  min-width: 1000px;
+  min-width: 960px;
   display: flex;
   margin: 0 auto;
 }
@@ -70,11 +70,14 @@
 
   .about-us__wrap {
     min-width: 0;
-    width: 720px;
+    width: 740px;
   }
 
   .about-us__img {
+    width: 200px;
+    overflow: hidden;
     padding-left: 0;
+    padding-top: 20px;
   }
 }
 

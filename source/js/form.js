@@ -22,9 +22,6 @@
     name.value = storage.name;
     telephone.value = storage.telephone;
     question.value = storage.question;
-    question.focus();
-  } else {
-    name.focus();
   }
 
   mainForm.addEventListener('submit', function (evt) {

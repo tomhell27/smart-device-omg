@@ -38,6 +38,7 @@
 
   var showModal = function () {
     modal.classList.remove('header__modal--close');
+    document.body.classList.add('header__body-fix');
     modal.classList.add('header__modal--show');
     document.addEventListener('keydown', onMenuEscPress);
     if (storage) {
@@ -53,6 +54,7 @@
   var hideModal = function () {
     modal.classList.remove('header__modal--show');
     modal.classList.add('header__modal--close');
+    document.body.classList.remove('header__body-fix');
     document.removeEventListener('keydown', onMenuEscPress);
   };
 

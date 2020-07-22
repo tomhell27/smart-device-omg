@@ -17,7 +17,7 @@
 
 .advantages__list {
   width: calc(100% - 750px);
-  min-width: 1000px;
+  min-width: 960px;
   margin: 0 auto;
   padding: 0;
   display: flex;
@@ -27,7 +27,6 @@
 
 .advantages__item {
   width: calc(100% / 2 - 30px);
-  height: 299px;
   padding: 45px;
   background-color: $color-font;
   cursor: pointer;

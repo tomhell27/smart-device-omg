@@ -176,7 +176,15 @@
     <article class="about-us">
       <div class="about-us__wrap">
         <div class="about-us__img">
-          <img src="img/2005.jpg" alt="2005">
+          <picture>
+            <source type="image/webp" media="(max-width: 1023px)" srcset="img/2005-tablet.webp, img/2005-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/2005.webp, img/2005@2x.webp 2x">
+
+            <!-- 1x:362px 2x:424px -->
+            <source media="(max-width: 1023px)" srcset="img/2005-tablet.jpg, img/2005-tablet@2x.jpg 2x">
+            <!-- 1x:317px 2x:634px -->
+            <img src="img/2005.jpg" alt="2005" srcset="img/2005@2x.jpg 2x">
+          </picture>
         </div>
         <div id="company" class="about-us__description">
           <h2>О компании</h2>
@@ -257,6 +265,7 @@
               </picture>
             </a>
           </li>
+
         </ul>
       </div>
     </section>
@@ -274,13 +283,13 @@
           <p class="form__question">Остались вопросы? Задайте их нам!</p>
           <p class="form__consalt">Мы проконсультируем Вас бесплатно</p>
           <form class="form__action" method="post" enctype="multipart/form-data" action="https://echo.htmlacademy.ru" autocomplete="off">
-            <label for="form-name">
+            <label for="form-name" aria-label="Имя">
               <input name="name" id="form-name" type="text" placeholder="Имя" required="">
             </label>
-            <label for="form-tel">
+            <label for="form-tel" aria-label="Телефон">
               <input name="telephone" id="form-tel" type="tel" placeholder="Телефон" class="phone" required="">
             </label>
-            <label for="form-question">
+            <label for="form-question" aria-label="Ваш вопрос">
               <textarea name="question" id="form-question" cols="30" rows="10" placeholder="Ваш вопрос" required=""></textarea>
             </label>
 
@@ -348,14 +357,14 @@
       <div class="footer__container">
         <!--Разделы сайта-->
 
-        <nav class="footer__nav">
+        <nav class="footer__nav accordeon accordeon">
           <!--Заголовок-->
 
-          <div class="footer__head-wrap">
+          <div class="footer__head-wrap accordeon__go">
             <h2 class="footer__head">Разделы сайта</h2>
             <button type="button" aria-label="Открыть-закрыть меню" class="footer__head-button"></button>
           </div>
-          <div class="footer__nav-wrap footer__close">
+          <div class="footer__nav-wrap footer__close accordeon__menu">
             <ul class="footer__nav-ul footer__nav-ul--1">
               <li>
                 <a href="#company" class="footer__nav-a">О компании</a>
@@ -384,13 +393,13 @@
           </div>
         </nav>
         <!--Раздел Контакты-->
-        <div class="footer__contacts">
-          <!--Нвш офис-->
-          <div class="footer__head-wrap">
+        <div class="footer__contacts accordeon">
+          <!--Нaш офис-->
+          <div class="footer__head-wrap accordeon__go">
             <h2 class="footer__head">Наш офис</h2>
             <button type="button" aria-label="Открыть-закрыть меню" class="footer__head-button"></button>
           </div>
-          <ul class="footer__contacts-ul footer__close">
+          <ul class="footer__contacts-ul footer__close accordeon__menu">
             <li>г. Мытищи, Олимпийский проспект, д.10</li>
             <li>
               <a href="tel:+74955894050" aria-label="Телефон для связи" class="footer__nav-a">
@@ -416,7 +425,7 @@
         <div class="footer__condition-wrap">
           <p class="footer__condition-save">Все права защищены</p>
           <p class="footer__condition-service">1999-2018 SD Service Devices</p>
-          <p class="footer__condition-confident">Условия конфиденциальности</p>
+          <a href="#" class="footer__condition-confident">Условия конфиденциальности</a>
         </div>
         <p>Developed by wow studio</p>
       </div>

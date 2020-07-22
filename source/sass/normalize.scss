@@ -351,3 +351,9 @@
   [hidden] {
     display: none;
   }
+
+  input::-webkit-input-placeholder { color: #ffffff; }
+  input::-moz-placeholder { color: #ffffff; }
+  textarea::-webkit-input-placeholder { color: #ffffff; }
+  textarea::-moz-placeholder { color: #ffffff; }
+
