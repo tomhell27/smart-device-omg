@@ -22,10 +22,13 @@
     name.value = storage.name;
     telephone.value = storage.telephone;
     question.value = storage.question;
+    if (storage.question === null) {
+      question.value = 'Ваш вопрос';
+    }
   }
 
   mainForm.addEventListener('submit', function (evt) {
-    if (!name.value || !telephone.value) {
+    if (!name.value || !telephone.value || !question.value) {
       evt.preventDefault();
 
     } else {

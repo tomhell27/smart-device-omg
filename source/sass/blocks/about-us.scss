@@ -58,6 +58,7 @@
 @media (max-width: $tablet-width) {
   .about-us {
     padding-top: 20px;
+    padding-bottom: 70px;
   }
 
   .about-us__span {
@@ -78,20 +79,26 @@
     overflow: hidden;
     padding-left: 0;
     padding-top: 20px;
+    position: relative;
+    right: 10px;
   }
 }
 
 @media (max-width: $mobile-width) {
   .about-us {
-    padding-bottom: 70px;
+    padding-bottom: 60px;
   }
 
   .about-us__description {
-    width: 288px;
+    width: calc(100% - 60px);
+    min-width: 295px;
+    margin: 0 auto;
   }
 
   .about-us__wrap {
-    width: 290px;
+    width: calc(100% - 60px);
+    min-width: 295px;
+    margin: 0 auto;
   }
 
   .about-us__img {
@@ -99,6 +106,7 @@
   }
 
   .about-us h2 {
+    margin-top: 18px;
     font-style: normal;
     font-weight: normal;
     font-size: 28px;
@@ -106,10 +114,10 @@
   }
 
   .about-us__p {
-    margin-bottom: 50px;
+    margin-bottom: 40px;
   }
 
   .about-us__a {
-    margin-top: 20px;
+    margin-top: 30px;
   }
 }

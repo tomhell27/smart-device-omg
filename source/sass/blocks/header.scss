@@ -40,7 +40,6 @@
 //Форма открыта
 .header__modal--show {
   display: block;
-  position: fixed;
 }
 
 //Форма закрыта
@@ -288,11 +287,14 @@
 
 @media (max-width: $mobile-width) {
   .header {
+    position: relative;
+    z-index: 200000;
     background-image: url("../img/drops-mobile.png");
     background-color: $color-back;
     background-size: cover;
     background-repeat: no-repeat;
     padding-bottom: 0;
+    padding-top: 17px;
   }
 
   .header__ul {
@@ -309,6 +311,9 @@
   }
 
   .header__wrap {
-    width: 300px;
+    position: relative;
+    z-index: 200000;
+    width: calc(100% - 40px);
+    min-width: 300px;
   }
 }

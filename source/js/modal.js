@@ -29,6 +29,18 @@
     isStorageSupport = false;
   }
 
+  form.addEventListener('submit', function (evt) {
+    if (!name.value || !telephone.value || !question.value) {
+      evt.preventDefault();
+    } else {
+      if (isStorageSupport) {
+        localStorage.setItem('name', name.value);
+        localStorage.setItem('telephone', telephone.value);
+        localStorage.setItem('question', question.value);
+      }
+    }
+  });
+
 
   var onMenuEscPress = function (evt) {
     if (evt.key === ESC_KEY) {
@@ -45,7 +57,9 @@
       name.value = storage.name;
       telephone.value = storage.telephone;
       question.value = storage.question;
-      question.focus();
+      if (storage.question === null) {
+        question.value = 'Ваш вопрос';
+      }
     } else {
       name.focus();
     }
@@ -78,17 +92,6 @@
     }
   });
 
-  form.addEventListener('submit', function (evt) {
-    if (!name.value || !telephone.value) {
-      evt.preventDefault();
 
-    } else {
-      if (isStorageSupport) {
-        localStorage.setItem('name', name.value);
-        localStorage.setItem('telephone', telephone.value);
-        localStorage.setItem('question', question.value);
-      }
-    }
-  });
 
 })();

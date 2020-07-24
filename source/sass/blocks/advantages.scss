@@ -5,6 +5,10 @@
   scroll-behavior: smooth;
 }
 
+.advantages__br {
+  display: none;
+}
+
 .advantages__head {
   margin-top: 50px;
   margin-bottom: 0;
@@ -192,7 +196,11 @@
 
 @media (max-width: $mobile-width) {
   .advantages {
-    padding-top: 30px;
+    padding-top: 40px;
+  }
+
+  .advantages__br {
+    display: block;
   }
 
   .advantages__head {
@@ -201,12 +209,74 @@
   }
 
   .advantages__list {
-    width: 300px;
+    width: calc(100% - 60px);
+    min-width: 288px;
     flex-direction: column;
   }
 
   .advantages__item {
-    width: 290px;
+    width: calc(100% - 60px);
+    min-width: 288px;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 10px;
     height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 19px;
   }
+
+  .advantages__item::before {
+    top: 17px;
+  }
+
+  .advantages__description {
+    width: calc(100% - 20px);
+    min-width: 255px;
+    margin-top: 5px;
+  }
+
+  .advantages__item--hired::before {
+    width: 32px;
+    height: 32px;
+  }
+
+  .advantages__item--time::before {
+    width: 30px;
+    height: 36px;
+  }
+
+  .advantages__item--person::before {
+    width: 32px;
+    height: 32px;
+  }
+
+  .advantages__item--detective::before {
+    width: 30px;
+    height: 26px;
+    top: 25px;
+  }
+
+  .advantages__item--detective .advantages__head {
+    margin-top: 45px;
+  }
+
+  .advantages__item--detective .advantages__description {
+    margin-top: 0;
+    position: relative;
+    top: -10px;
+  }
+
+  .advantages__item--detective {
+    padding-bottom: 25px;
+  }
+
+  .advantages__item--person::before {
+    top: 25px;
+  }
+
+  .advantages__item--person .advantages__description {
+    margin-top: 10px;
+  }
+
 }

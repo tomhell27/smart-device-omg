@@ -18,7 +18,7 @@
 .services__li {
   position: relative;
   margin-bottom: 17px;
-  width: calc(100% / 3 - 60px);
+  width: calc(100% / 3 - 20px);
   overflow: hidden;
 }
 
@@ -60,10 +60,14 @@
 }
 
 .services__head {
-  width: 190px;
-  top: 40px;
+  width: 170px;
+  top: 30px;
   left: 44px;
   position: absolute;
+  font-family: $font-roboto--condensed;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 30px;
 }
 
 .services__wrap {
@@ -74,8 +78,12 @@
 
 @media (max-width: $tablet-width) {
   .services {
-    padding-top: 53px;
-    padding-bottom: 30px;
+    padding-top: 50px;
+    padding-bottom: 20px;
+  }
+
+  .services__head {
+    margin-top: 10px;
   }
 
   .services__wrap {
@@ -101,37 +109,40 @@
 
   .services__li {
     width: 715px;
-    margin-bottom: 46px;
+    margin-bottom: 48px;
   }
 }
 
 @media (max-width: $mobile-width) {
   .services {
     padding-bottom: 35px;
-    padding-top: 45px;
+    padding-top: 50px;
   }
 
   .services__wrap {
-    width: 310px;
+    width: calc(100% - 80px);
+    min-width: 310px;
   }
 
   .services__p {
     padding-left: 0;
-    width: 280px;
+    width: calc(100% - 80px);
+    min-width: 290px;
     margin: 0 auto;
-    padding-right: 10px;
+    padding-right: 0;
     font-weight: normal;
     font-size: 28px;
     line-height: 39px;
   }
 
   .services__a {
-    width: 290px;
+    width: calc(100% - 80px);
+    min-width: 290px;
     height: 256px;
   }
 
   .services__li {
-    width: 300px;
+    width: 290px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 30px;
@@ -142,6 +153,11 @@
     font-weight: normal;
     font-size: 20px;
     line-height: 30px;
-    top: 0;
+    top: 5px;
+    left: 30px;
+  }
+
+  .services__head--complete {
+    top: 20px;
   }
 }

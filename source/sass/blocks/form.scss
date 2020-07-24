@@ -31,6 +31,8 @@
 }
 
 .form__content {
+  position: relative;
+  z-index: 66;
   width: 570px;
   margin-left: 110px;
   display: flex;
@@ -172,13 +174,34 @@
   }
 
   .form__post {
-    padding-top: 50px;
+    padding-top: 40px;
+  }
+
+  .form__content {
+    width: 590px;
+    margin: 0 auto;
+  }
+
+  .form__consalt {
+    margin-top: 20px;
+  }
+
+  .form textarea {
+    width: 570px;
+  }
+
+  .form__action {
+    margin-top: 40px;
+  }
+
+  .form__submit {
+    width: 280px;
   }
 }
 
 @media (max-width: $mobile-width) {
   .form {
-    padding-top: 30px;
+    padding-top: 25px;
     padding-bottom: 45px;
   }
 
